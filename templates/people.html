@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/app.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People List</title>
+  </head>
+  <body>
+    <h1>People List</h1>
+    <div class="row row-m-t">
+      {% for people in peoples['results'] %}
+
+      <div class="card text-center" style="width: 18rem">
+        <div class="card-body">
+          <h1 class="card-title">{{people['name']}}</h1>
+          <p class="card-text">Height: {{people['height']}}</p>
+          <p class="card-text">Mass: {{people['mass']}}</p>
+          <p class="card-text">Hair Color: {{people['hair_color']}}</p>
+
+          <p class="card-text">Skin Color: {{people['skin_color']}}</p>
+          <p class="card-text">Birth Year: {{people['birth_year']}}</p>
+          <p class="card-text">Eye Color: {{people['eye_color']}}</p>
+          <p class="card-text">Gender: {{people['gender']}}</p>
+        </div>
+      </div>
+      {% endfor%}
+    </div>
+  </body>
+</html>
